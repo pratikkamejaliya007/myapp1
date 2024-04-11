@@ -1,0 +1,32 @@
+.main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sub{
+    flex-basis: 32%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 250px;
+    border: 1px solid rgb(210, 208, 208);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.sub img{
+    width: 50%;
+    height: 75%;
+    margin: 0 auto;
+}
+
+.text{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
