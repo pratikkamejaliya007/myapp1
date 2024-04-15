@@ -1,12 +1,12 @@
 import './App.css';
-import Fetch from './Fetch';
-import Counter from './Counter';
+import Cal from './Cal';
 
 function App() {
   return (
     <div className="App">
-      <Counter/>
-      <Fetch/>
+      
+      <Cal />
+
     </div>
   );
 }

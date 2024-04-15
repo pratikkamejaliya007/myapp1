@@ -1,0 +1,53 @@
+.cal{
+  width: 75%;
+  height: 800px;
+}
+
+.display{
+  width: 75%;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#show{
+  width: 300px;
+  height: 100px;
+  font-size: 25px;
+  padding: 10px;
+  background-color: #2C3E50;
+  color: white;
+}
+
+#ans{
+  border-top: 1px solid gainsboro;
+  width: 320px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #2C3E50;
+  color: white;
+}
+
+.btn-group{
+  width: 75%;
+  height: 400px;
+  margin:  0 auto;
+}
+
+table{
+  margin: 0 auto;
+}
+
+.btn-group button{
+  width: 75px;
+  height: 75px;
+  font-size: 30px;
+  background-color: #2E4053;
+  border: none;
+  color: white;
+}
+
+.btn-group button:hover{
+  background-color: #85929E ;
+}
