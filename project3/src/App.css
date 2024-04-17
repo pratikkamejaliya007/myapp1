@@ -1,0 +1,43 @@
+button{
+  width: 150px;
+  height: 40px;
+  border: none;
+  margin: 0 20px;
+}
+
+h4{
+  text-align: center;
+  font-size: 30px;
+}
+
+.logout{
+  background-color: red;
+  color: white;
+  font-size: 20px;
+}
+
+.login{
+  background-color: rgb(25, 243, 13);
+  color: white;
+  font-size: 20px;
+}
+
+section{
+  width: 100%;
+  height: inherit;
+}
+
+table{
+  padding: 30px;
+  background-color: beige;
+}
+
+tr th{
+  border: 1px solid black;
+  padding: 3px 5px;
+}
+
+tr td{
+  border: 1px solid black;
+  padding: 3px 5px;
+}
