@@ -1,10 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect ,useRef} from 'react';
 
 function Timer() {
     const [second, setSecond] = useState(0);
     const [min,setMin] = useState(0)
     const [mili,setMili] = useState(0)
     const [inter, setInter] = useState(false);
+
+    const [key,setkey]=useState(true)
+
+    // key event
+    window.addEventListener("keypress",(e)=>{
+        
+        if(e.key == 's' || e.key == 'S'){
+            if(key){
+                setInter(false)
+                setkey(false)
+            }else{
+                setInter(true)
+                setkey(true)
+            }
+        }
+
+        if(e.key == 'r' || e.key == 'R'){
+            setMili(0)
+            setSecond(0)
+            setMin(0)
+
+            setInter(false)
+            setkey(false)
+
+        }
+    })
+
 
     useEffect(() => {
         
@@ -42,7 +69,7 @@ function Timer() {
                 setMin(prevmin => {
                     const newmin = prevmin + 1;
                     
-                    return newmin >= 60 ? 0 : newmin   
+                    return  newmin   
 
                 })
 
