@@ -1,7 +1,11 @@
+
+body{
+    background-image: linear-gradient(to left,#154360, #2980b9 );
+}
+
 .sub{
     width: 350px;
     height: 400px;
-    border: 1px solid black;
     margin-top: 20px;
     padding: 20px;
 }
@@ -9,17 +13,29 @@
 .sing{
     width: 350px;
     height: 450px;
-    border: 1px solid black;
     margin-top: 20px;
     padding: 20px;
 }
 
+form{
+    background-color: #283747;
+    padding: 10px;
+}
 
 .mail{
-    border-bottom: 1px solid gray;
     width: 80%;
     margin: 10px auto;
-    padding: 15px;
+    padding: 10px 15px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+label,h1{
+    color: white;
+}
+
+a{
+    color: #f0f3f4 !important;
 }
 
 input{

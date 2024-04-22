@@ -1,0 +1,25 @@
+form{
+  width: 500px;
+  height: inherit;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+form input{
+  width: 300px;
+  height: 35px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+}
+
+form button{
+  margin-top: 20px;
+  width: 150px;
+  height: 35px;
+  border: none;
+  background-color: green;
+  color: white;
+  font-size: 20px;
+}

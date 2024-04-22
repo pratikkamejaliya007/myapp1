@@ -120,6 +120,7 @@ function Login(props) {
           singdata ?
           (
             <>
+            <center>
               <div className='sing'>
         <form action="" onSubmit={submit}>
 
@@ -154,7 +155,7 @@ function Login(props) {
 
         </form>
       </div>
-
+      </center>
             </>
           )
           :
@@ -236,6 +237,7 @@ function Login(props) {
           :
           (
             <>
+            <center>
             <div className='sub'>
         <form action="" onSubmit={submit_1}>
 
@@ -260,6 +262,7 @@ function Login(props) {
 
         </form>
       </div>
+      </center>
             </>
           )
         )
