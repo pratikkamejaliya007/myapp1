@@ -1,58 +1,58 @@
-import React from 'react'
-import { useState } from 'react'
+// import React from 'react'
+// import { useState } from 'react'
 
-function From_1() {
+// function From_1() {
 
-    const [name,setName]=useState("")
+//     const [name,setName]=useState("")
 
-    const [mail,setMail]=useState("")
+//     const [mail,setMail]=useState("")
 
-    const [password,setPassword]=useState("")
+//     const [password,setPassword]=useState("")
 
-    function submit(e){
+//     function submit(e){
 
-        e.preventDefault()
+//         e.preventDefault()
 
-        // mail.style.background="red"
+//         // mail.style.background="red"
 
-        console.log(`${name}
-            ${mail}
-            ${password}
-        `)
+//         console.log(`${name}
+//             ${mail}
+//             ${password}
+//         `)
 
-    }
+//     }
 
 
-  return (
-    <div>
+//   return (
+//     <div>
 
-            <h3 style={{textAlign:'center'}}>Control Form</h3>
+//             <h3 style={{textAlign:'center'}}>Control Form</h3>
 
-        <center>
+//         <center>
 
-        <form action="" onSubmit={submit}>
+//         <form action="" onSubmit={submit}>
 
-            <label htmlFor="">Enter Name:</label> <br />
+//             <label htmlFor="">Enter Name:</label> <br />
 
-            <input type="text" value={name} onChange={(e)=> setName(e.target.value)} placeholder='Enter Name'/> <br />
+//             <input type="text" value={name} onChange={(e)=> setName(e.target.value)} placeholder='Enter Name'/> <br />
 
-            <label htmlFor="">Enter E-mail:</label> <br />
+//             <label htmlFor="">Enter E-mail:</label> <br />
 
-            <input type="mail" value={mail} onChange={(e)=> setMail(e.target.value)} placeholder='Enter E-mail'/> <br />
+//             <input type="mail" value={mail} onChange={(e)=> setMail(e.target.value)} placeholder='Enter E-mail'/> <br />
 
-            <label htmlFor="">Enter Password:</label> <br />
+//             <label htmlFor="">Enter Password:</label> <br />
 
-            <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder='Enter Password'/> <br />
+//             <input type="password" value={password} onChange={(e)=> setPassword(e.target.value)} placeholder='Enter Password'/> <br />
 
-            <button type='submit'>Submit</button>
+//             <button type='submit'>Submit</button>
 
-        </form>
-        </center>
+//         </form>
+//         </center>
 
        
 
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default From_1
+// export default From_1
