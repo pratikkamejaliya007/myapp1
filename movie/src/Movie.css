@@ -1,0 +1,43 @@
+
+body{
+    background-color: black;
+    color: white;
+  }
+  
+  .main{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .data{
+    flex-basis: 23%;
+    height: 750px;
+    background-color: #202020;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .data img{
+    width: 350px;
+    border-radius: 10px;
+    margin-left: 28px;
+  }
+  
+  h5{
+    width: 70px;
+  }
+
+  #btn-1{
+    width: 125px;
+    height: 35px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+  }

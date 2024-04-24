@@ -1,10 +1,15 @@
 import './App.css';
+import './Movie.css'
 import Form_styling from './Form_styling';
+import Movie from './Movie';
 
 function App() {
   return (
     <>
-    <Form_styling />
+    {/* <Form_styling /> */}
+
+    <Movie />
+
     </>
   );
 }

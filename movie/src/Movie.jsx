@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useState,useEffect ,useRef} from 'react'
 import imdb from './imdb.png'
 
 function Movie() {
@@ -7,6 +7,10 @@ function Movie() {
     const [movies, setMovies] = useState([]);
 
     const [copy,setCopy]=useState([])
+
+    const [fil,setFil]=useState([])
+
+    // const fil=useRef([])
 
     // useEffect(() => {
     //     const fetchAndStoreMovies = async () => {
@@ -52,24 +56,49 @@ function Movie() {
 
     },[])
 
+    const BOOK = (index) => {
+
+        let arr=[]
+
+        const filteredMovies = movies.filter((el,i) => i === index);
+        arr.push(filteredMovies)
+        setFil(arr)
+
+        console.log(index)
+        
+
+        console.log(fil);
+        
+    };
+
+    
   return (
+    <>
     <div className='main'>
 
         {
 
-        movies &&movies.map((el)=>(
+        movies &&movies.map((el,i)=>(
                 <div className='data'>
-                    {/* <img src={el.image} alt="" /> */}
+                    <img src={el.image} alt="" />
                     <h3>{el.title} ({el.year})</h3>
-                    <p>{el.genre}</p>
-                    <h5 style={{display:'flex', alignItems:'center',justifyContent:'space-around'}}>IMDB : {el.rating} <img src={imdb} alt="" style={{width:'35px'}} /></h5>
-                    {/* <img src={el.thumbnail} alt="" /> */}
+                    
+                    <div style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+                        
+                        <p> <b>Category:</b> <br />{el.genre[0]} &nbsp; {el.genre[1]} &nbsp; {el.genre[2]}</p>
+                        <h5 style={{display:'flex', alignItems:'center',justifyContent:'space-around'}}> {el.rating}    <img src={imdb} alt="" style={{width:'35px'}} /></h5>
+
+                    </div>
+
+                    <button onClick={() => BOOK(i)} id='btn-1'>BOOK</button>
+
                 </div>
             ))
 
         }
 
     </div>
+    </>
   )
 }
 

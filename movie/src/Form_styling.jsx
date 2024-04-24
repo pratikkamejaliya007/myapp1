@@ -1,51 +1,51 @@
-import React from 'react'
-import { useState } from 'react'
+// import React from 'react'
+// import { useState } from 'react'
 
-function Form_styling() {
+// function Form_styling() {
 
-    const[Form,setForm]=useState({
-        Username:'',
-        Email:'',
-        Password:''
-    })
+//     const[Form,setForm]=useState({
+//         Username:'',
+//         Email:'',
+//         Password:''
+//     })
 
-    function handlechange(e){
+//     function handlechange(e){
 
-        const {name,value}= e.target
+//         const {name,value}= e.target
 
-        setForm({
-            ... Form ,
-            [name] : value
-        })
+//         setForm({
+//             ... Form ,
+//             [name] : value
+//         })
 
-    }
+//     }
 
-    function handlesubmit(e){
+//     function handlesubmit(e){
 
-        e.preventDefault()
+//         e.preventDefault()
 
-        console.log(Form)
+//         console.log(Form)
 
-    }
+//     }
 
 
-  return (
-    <div>
+//   return (
+//     <div>
 
-        <form action="" onSubmit={handlesubmit}>
+//         <form action="" onSubmit={handlesubmit}>
 
-            <input type="text" name="Username" value={Form.Username} placeholder='Enter username' onChange={handlechange} /> <br /><br />
+//             <input type="text" name="Username" value={Form.Username} placeholder='Enter username' onChange={handlechange} /> <br /><br />
 
-            <input type="text" name="Email" value={Form.Email} placeholder='Enter Email' onChange={handlechange} /> <br /><br />
+//             <input type="text" name="Email" value={Form.Email} placeholder='Enter Email' onChange={handlechange} /> <br /><br />
 
-            <input type="text" name="Password" value={Form.Password} placeholder='Enter Password' onChange={handlechange} /> <br /><br />
+//             <input type="text" name="Password" value={Form.Password} placeholder='Enter Password' onChange={handlechange} /> <br /><br />
             
-            <button type='submit'>Submit</button>
+//             <button type='submit'>Submit</button>
 
-        </form>
+//         </form>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Form_styling
+// export default Form_styling

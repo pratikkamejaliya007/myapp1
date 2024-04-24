@@ -92,6 +92,7 @@ function Login(props) {
     setpass('')
     setconf('')
 
+
     setsingdata(false)
 
   }else{
