@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState , useEffect} from 'react'
 
+import FetchData from './FetchData'
+
 function Login(props) {
 
     // login
@@ -22,13 +24,8 @@ function Login(props) {
     let storedData = JSON.parse(localStorage.getItem("DATA"))
 
     const submit_1 = (e) =>{
+
       e.preventDefault()
-
-      console.log(storedData)
-
-      // const a = storedData.filter((el)=>{
-      //   return (el.UserName === rename && el.Password === repass)
-      // })
 
       let a  = storedData.some(obj => obj.UserName === rename);
 
@@ -53,11 +50,8 @@ function Login(props) {
     }
 
     function singin(){
-      setsign(true)
-      
+      setsign(true)  
     }
-    console.log(sign)
-
     
     // signin
 
@@ -69,6 +63,11 @@ function Login(props) {
   const [pass,setpass]=useState('')
 
   const [conf,setconf]=useState('')
+
+  const [err,setErr]=useState({
+    username:'',
+    Password:''
+  })
 
   let submit = (e) =>{
 
@@ -84,9 +83,6 @@ function Login(props) {
     })
 
     localStorage.setItem("DATA",JSON.stringify(data))
-
-    // const newData = [...data, { UserName: name, Password: pass }];
-    // localStorage.setItem("DATA", JSON.stringify(newData));
 
     setname('')
     setpass('')
@@ -131,7 +127,7 @@ function Login(props) {
             <div className="mail">
             <i class="ri-user-2-fill"></i>
             
-            <input type="text" name=""   onChange={(e)=>{setname(e.target.value)}}  placeholder='Typey our username' />
+            <input type="text" name=""   onChange={(e)=>{setname(e.target.value)}}  placeholder='Type our username' />
 
             </div>
 
@@ -165,33 +161,8 @@ function Login(props) {
 
 <button onClick={logout} className='logout'>LOG OUT</button>
 
-<section>
-            <center>
-            <table>
+            {/* <FetchData /> */}
 
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>quantity</th>
-            <th>price</th>
-            <th>expiry (year)</th>
-        </tr>
-            {
-        
-        props.data && props.data.map((el)=>(
-            <tr key={el.id}>
-                <td>{el.id}</td>
-                <td>{el.name}</td>
-                <td>{el.quantity}</td>
-                <td>{el.price}</td>
-                <td>{el.expiry}</td>
-            </tr>
-        ))
-               
-            }
-            </table>
-</center>
-</section>
             
             </>
           )
@@ -205,33 +176,7 @@ function Login(props) {
             <>
               <button onClick={logout} className='logout'>LOG OUT</button>
 
-<section>
-            <center>
-            <table>
-
-        <tr>
-            <th>id</th>
-            <th>name</th>
-            <th>quantity</th>
-            <th>price</th>
-            <th>expiry (year)</th>
-        </tr>
-            {
-        
-        props.data && props.data.map((el)=>(
-            <tr key={el.id}>
-                <td>{el.id}</td>
-                <td>{el.name}</td>
-                <td>{el.quantity}</td>
-                <td>{el.price}</td>
-                <td>{el.expiry}</td>
-            </tr>
-        ))
-               
-            }
-            </table>
-</center>
-</section>
+              {/* <FetchData /> */}
 
             </>
           )

@@ -3,6 +3,8 @@ import Sign from './Sign';
 
 import Login from './Login';
 
+import FetchData from './FetchData';
+
 // import Add from './Add';
 
 
@@ -87,9 +89,11 @@ function App() {
   return (
     <div className="App">
       
-    <Login data={orgData}/>
+    <Login data={orgData}/> 
 
     <Sign/>
+
+    <FetchData />
 
     {/* <Add /> */}
 
