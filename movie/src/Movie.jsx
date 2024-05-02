@@ -16,6 +16,8 @@ function Movie(props) {
 
     const [originalMovies, setOriginalMovies] = useState([]);
 
+    const [selectedValue,setSelectedValue]=useState()
+
     // const fil=useRef([])
 
     // useEffect(() => {
@@ -56,24 +58,24 @@ function Movie(props) {
 
         setCopy(data)
 
-        setMovies(data)
+        const moviesWithTickets = data.map(movie => ({ ...movie, Ticket: 1 }));
+
+        setMovies(moviesWithTickets)
+
+        // console.log(movies)
 
         setOriginalMovies(data)
 
     },[])
-
-    const BOOK = (index) => {
-
-        const filteredMovies = movies.filter((el,i) => i === index);
-
-        setFil(prevFil => [...prevFil,...filteredMovies])
-        
-    };
     
+    const BOOK = (index) => {
+        const selectedMovie = movies[index];
+        const updatedMovie = { ...selectedMovie, Time: selectedValue };
+        setFil(prevFil => [...prevFil, updatedMovie]);
+    };
 
     function handelbook(){
         setHistory(true)
-        
     }
     
     
@@ -85,7 +87,22 @@ function Movie(props) {
             setMovies(show);
         }
     }
+
+    const increament = (i) =>{
+        const updated=[...movies]
+        updated[i].Ticket += 1
+        setMovies(updated)
+    }
     
+    const decrement = (i) =>{
+        const update=[...movies]
+        if(update[i].Ticket > 1){
+            update[i].Ticket -= 1
+        }
+        setMovies(update)
+    }
+
+
   return (
     <>
 
@@ -132,13 +149,28 @@ function Movie(props) {
 
                     </div>
 
-                    <button onClick={() => BOOK(i)} id='btn-1'>BOOK</button>
-                    
-                    <select name="" id="" className='w-[200px] h-[40px] bg-gray-500 ms-[90px] mt-3'>
-                        <option value="">12:00 PM TO 3:00 PM</option>
-                        <option value="">3:30 PM TO 6:30 PM</option>
-                        <option value="">3:30 PM TO 6:30 PM</option>
-                    </select>
+                    <div className='flex items-center mt-5'>
+                            <button onClick={() => BOOK(i)} id='btn-1'>BOOK</button>
+                            
+                            <select
+                                name=""
+                                id=""
+                                className="w-[200px] h-[40px] bg-gray-500 ms-[90px] mt-3"
+                                value={selectedValue} // Add the value attribute here
+                                onChange={(e) => setSelectedValue(e.target.value)} // Ensure you have an onChange handler to update the selected value
+                                >
+                                <option value="12:00 PM TO 3:00 PM">12:00 PM TO 3:00 PM</option>
+                                <option value="3:30 PM TO 6:30 PM">3:30 PM TO 6:30 PM</option>
+                                <option value="8:00 PM TO 12:00 PM">8:00 PM TO 12:00 PM</option>
+                                </select>
+
+                    </div>
+
+                    <div className='flex'>
+                        <button className='w-[50px] h-[35px] bg-slate-900 ' onClick={()=>decrement(i)} >-</button>
+                        <h1 className='text-2xl mx-2'>{el.Ticket}</h1>
+                        <button className='w-[50px] h-[35px] bg-slate-900' onClick={()=>increament(i)}>+</button>
+                    </div>
 
                 </div>
             ))}

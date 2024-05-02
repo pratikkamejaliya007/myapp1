@@ -21,6 +21,15 @@ function History(props) {
         
     },[])
 
+    const delate = (index) =>{
+        const select=[...bookdata]
+        const upadte=select.filter(i=>{
+            return i == index
+        })
+        console.log(upadte)
+        setBookdata(upadte)
+    }
+
   return (
     <>
 
@@ -52,7 +61,12 @@ function History(props) {
 
             </div>
 
-            {/* <button onClick={() => BOOK(i)} id='btn-1'>BOOK</button> */}
+            <div className='mt-2 flex items-center justify-between'>
+                <p className='text-lg'>Time:{el.Time}</p>
+                <p className='text-lg'>Ticket:{el.Ticket}</p>
+            </div>
+
+            <button onClick={()=>delate(i)}  id='btn-1'>Delete</button>
 
         </div>
     ))}
