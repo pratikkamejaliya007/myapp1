@@ -11,8 +11,6 @@ function Feathing() {
 
             let response = await fetch('https://fakestoreapi.com/products')
             let jsondata= await response.json()
-
-            // console.log(jsondata)
             
             setdata(jsondata)
            
