@@ -1,0 +1,15 @@
+.input_1{
+  width: 200px;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+}
+
+button{
+  width: 75px;
+  height: 35px;
+  margin-left: 10px;
+  border: none;
+  background-color: green;
+  color: white;
+}
