@@ -15,17 +15,24 @@ function Todo() {
         console.log(data )
         setInputvalue('')
     }
+
+    useEffect(() => {
+        let prevdata = JSON.parse(sessionStorage.getItem('Todo'));
+        if (prevdata) {
+          setData(prevdata);
+        }
+      }, []);
     
     useEffect(()=>{
 
         
-    let prevdata=JSON.parse(localStorage.getItem("Todo"))
+    let prevdata=JSON.parse(sessionStorage.getItem("Todo"))
 
     if(prevdata){
         setData(prevdata)
     }
 
-    },[])
+    },[data])
     
     localStorage.setItem("Todo",JSON.stringify(data))   
 
