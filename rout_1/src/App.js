@@ -10,6 +10,8 @@ import { useState } from 'react';
 function App() {
 
   const[posts,setPostes]=useState([])
+  
+  const [ex,setEx]=useState([])
 
 
   function addnewpost(title,content)
@@ -29,17 +31,26 @@ function App() {
     setPostes(posts.filter((el)=> el.id != id))
   }
 
-  function Update(id){
+  function UP(id){
     
-    const add=posts.find((el)=> el.id == id)
+    setEx(posts.find((el)=> el.id == id))
 
   }
+
+  function Change(id,title,content){
+
+    setPostes(posts.map((el)=>(
+      el.id == id ? {...el, title:title , content:content} : el
+    )))
+
+  }
+
+
+
 
   return (
 
     <>
-
-    <Update />
       
     <Router>
 
@@ -48,9 +59,9 @@ function App() {
 <Routes>
 
 
-<Route path='/' element={<Home posts={posts} Delete={Delete} Update={Update}/>}></Route>
+<Route path='/' element={<Home posts={posts} Delete={Delete} Up={UP}/>}></Route>
 <Route path='/add' element={<Addpost addnewpost={addnewpost} />}></Route>
-<Route path='/update' element={<Update />}></Route>
+<Route path='/update' element={<Update Change={Change} ex={ex} />}></Route>
 
 </Routes>      
  

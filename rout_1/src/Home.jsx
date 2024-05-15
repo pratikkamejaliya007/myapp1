@@ -1,13 +1,17 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-function Home({ posts , Delete , Update}){
+import { useNavigate } from 'react-router-dom'
+function Home({ posts , Delete , Up}){
+
+  const za=useNavigate()
 
     function del(id){
         Delete(id)
     }
 
-    function up(id){
-        Update(id)
+    function upa(id){
+      Up(id)
+      za('/update')
     }
 
   return (
@@ -20,16 +24,12 @@ function Home({ posts , Delete , Update}){
            <h1>{el.title}</h1>
            <p>{el.content}</p>
            <button onClick={()=>del(el.id)}>delete</button>
-           {/* <button onClick={()=>up(el.id)}> */}
-            
-            {/* </button> */}
+            <button onClick={()=>upa(el.id)}>up</button>
            </>
           ))
          }
 
          <br />
-        
-         <Link to="/update">update</Link>
         <Link to="/add">ADD POST</Link>
     </div>
   )
