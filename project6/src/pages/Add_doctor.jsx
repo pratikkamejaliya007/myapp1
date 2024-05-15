@@ -27,7 +27,6 @@ function Add_doctor() {
 
     function submit(e){
 
-        // e.preventDefault()
         e.preventDefault();
 
         setDoctordata([...Doctordata,{
@@ -37,6 +36,17 @@ function Add_doctor() {
             Contact:contact,
             Mail:mail
         }])
+
+        if(Doctordata.Id !== ''){
+            
+        setDoctordata(prevDoctordata => {
+            const updatedDoctordata = [...prevDoctordata, Doctordata];
+            localStorage.setItem("Doctor", JSON.stringify(updatedDoctordata));
+            return updatedDoctordata;
+        });
+        }
+
+        console.log(Doctordata)
 
         setId('');
         setName('');
@@ -50,7 +60,10 @@ function Add_doctor() {
 
   return (
     <center >
-        <form action="" onClick={submit} className='m-10 h-[400px] flex flex-col items-center justify-around'>
+
+            <h3 className='mt-8 text-3xl'>Doctor</h3>
+
+        <form action="" onClick={submit} className='m-10 h-[400px] flex flex-col items-center justify-around -mt-0'>
 
             <input type="text" placeholder='Enter Id' className='w-[500px] h-[35px] p-2 border ' value={id} onChange={(e)=>{setId(e.target.value)}} /> <br />
 

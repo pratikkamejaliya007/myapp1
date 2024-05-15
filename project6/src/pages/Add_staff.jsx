@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 
-function Add_ataff() {
+function  Add_staff() {
 
     
-        const [Doctordata, setDoctordata] = useState([]);
+        const [Staffdata, setStaffdata] = useState([]);
     
         const [id,setId]=useState('')
         const [name,setName]=useState('')
@@ -13,16 +13,15 @@ function Add_ataff() {
         const [mail,setMail]=useState('')
     
         useEffect(() => {
-            console.log("Updated Doctor Data:", Doctordata);
-        }, [Doctordata]);
+            console.log("Updated Doctor Data:", Staffdata);
+        }, [Staffdata]);
     
     
         function submit(e){
-    
-            // e.preventDefault()
+
             e.preventDefault();
     
-            setDoctordata([...Doctordata,{
+            setStaffdata([...Staffdata,{
                 ID:id,
                 Name:name,
                 Position:position,
@@ -42,7 +41,10 @@ function Add_ataff() {
     
       return (
         <center >
-            <form action="" onClick={submit} className='m-10 h-[400px] flex flex-col items-center justify-around'>
+
+                <h3 className='mt-8 text-3xl'>Staff</h3>
+
+            <form action="" onClick={submit} className='m-10 h-[400px] flex flex-col items-center justify-around -mt-0'>
     
                 <input type="text" placeholder='Enter Id' className='w-[500px] h-[35px] p-2 border ' value={id} onChange={(e)=>{setId(e.target.value)}} /> <br />
     
@@ -65,4 +67,4 @@ function Add_ataff() {
       )
     }
 
-export default Add_ataff
+export default  Add_staff

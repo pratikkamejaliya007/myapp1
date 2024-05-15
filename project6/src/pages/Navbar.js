@@ -10,7 +10,7 @@ function Navbar() {
                     <Link to='/' className='w-[30%] bg-slate-100 h-full flex items-center justify-center'>Doctor</Link>
                     <Link to='/patient' className='w-[30%] bg-slate-100 h-full flex items-center justify-center'>Patient</Link>
                     <Link to='/staff' className='w-[30%] bg-slate-100 h-full flex items-center justify-center'>Staff</Link>
-                    <Link to='/add' className='w-[10%] bg-green-400 h-full flex items-center justify-center'>Add</Link>
+                    <Link to='/Add/Add_doctor' className='w-[10%] bg-green-400 h-full flex items-center justify-center'>Add</Link>
                 </li>
             </ul>
         </nav>
