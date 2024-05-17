@@ -9,7 +9,7 @@ function Add_patient() {
   const [mail, setMail] = useState('');
 
   useEffect(() => {
-    console.log("Updated Doctor Data:", Paientdata);
+    localStorage.setItem('Paientdata',JSON.stringify(Paientdata))
   }, [Paientdata]);
 
   function submit(e) {

@@ -13,7 +13,9 @@ function  Add_staff() {
         const [mail,setMail]=useState('')
     
         useEffect(() => {
-            console.log("Updated Doctor Data:", Staffdata);
+            if(Staffdata.length > 0){
+                localStorage.setItem("Staffdata",JSON.stringify(Staffdata))
+            }
         }, [Staffdata]);
     
     
@@ -44,7 +46,7 @@ function  Add_staff() {
 
                 <h3 className='mt-8 text-3xl'>Staff</h3>
 
-            <form action="" onClick={submit} className='m-10 h-[400px] flex flex-col items-center justify-around -mt-0'>
+            <form action="" onSubmit={submit} className='m-10 h-[400px] flex flex-col items-center justify-around -mt-0'>
     
                 <input type="text" placeholder='Enter Id' className='w-[500px] h-[35px] p-2 border ' value={id} onChange={(e)=>{setId(e.target.value)}} /> <br />
     
