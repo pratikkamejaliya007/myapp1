@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
+import {Link , useNavigate} from 'react-router-dom'
 
 function  Add_staff() {
 
+    const nav=useNavigate()
     
         const [Staffdata, setStaffdata] = useState([]);
     

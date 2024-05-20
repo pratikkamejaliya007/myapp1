@@ -14,17 +14,14 @@ function App() {
   const [ex,setEx]=useState([])
 
 
-  function addnewpost(title,content)
-  {
-     let newpost={
-      id: new Date().getTime(),
-      title:title,
-      content:content
+  function addnewpost(newpost){
 
-     }
-     setPostes([...posts,newpost])
+    newpost.id=Date.now()
 
+    setPostes([...posts,newpost])
   }
+
+  console.log(posts)
 
   
   function Delete(id){

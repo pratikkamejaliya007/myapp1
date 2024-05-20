@@ -14,6 +14,7 @@ import Doctor from './pages/Doctor';
 import Patient from './pages/Patient';
 import Staff from './pages/Staff';
 import Add from './pages/Add';
+import Update from './pages/Update';
 
 import Add_doctor from './pages/Add_doctor';
 import  Add_staff from './pages/Add_staff'
