@@ -24,7 +24,7 @@ function Addpost({addnewpost}) {
   }
 
   return (
-    <center>
+    <center style={{ height:'600px', backgroundColor:'gray'}}>
         <h1 style={{color:"red"}}> *** ADD POST PAGE *** </h1>
         <br /> <br />
 
@@ -36,13 +36,13 @@ function Addpost({addnewpost}) {
          <textarea name="" id="" value={content} onChange={(a)=>setContent(a.target.value)}></textarea>
          <br /><br />
 
-          <input type="file" onChange={handleimage} />
+          <input type="file"  onChange={handleimage} style={{marginLeft:"70px"}} /> <br /><br />
 
-         <button type='submit'>ADD POST</button>
+         <button type='submit' style={{width:'100px' , height:'40px' , backgroundColor:"green" ,color:'white', border:'none'}}>ADD POST</button>
 
         </form>
         <br /><br /><br />
-        <Link to="/">BACK TO HOME</Link>
+        <Link  style={{width:'100px' , height:'50px' , padding:'10px' , backgroundColor:"#087af4" ,color:'white', border:'none'}} to="/">BACK TO HOME</Link>
     </center>
   )
 }

@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+
+import { MdDelete } from "react-icons/md";
+import { FaPenToSquare } from "react-icons/fa6";
+
 function Home({ posts , Delete , Up}){
 
   const za=useNavigate()
@@ -29,18 +33,26 @@ function Home({ posts , Delete , Up}){
 
          {
          filterItems.map((el)=>(
-           <>
+           <div style={{display:'flex', flexDirection:'column',alignItems:'center'}}>
            <h1>{el.title}</h1>
            <p>{el.content}</p>
-           <img src={URL.createObjectURL(el.image)} alt="posts" />
-           <button onClick={()=>del(el.id)}>delete</button>
-            <button onClick={()=>upa(el.id)}>up</button>
-           </>
+           {/* <img src={URL.createObjectURL(el.image)} alt="posts" style={{width:'200px'}} /> */}
+
+           <audio controls>
+            <source src={URL.createObjectURL(el.image)}/>
+           </audio>
+
+            <div>
+            <button style={{width:'100px' , height:'50px',color:'red',background:'none', fontSize:"40px", border:'none'}} onClick={()=>del(el.id)}><MdDelete /></button>
+            <button style={{width:'100px' , height:'50px',color:'green',background:'none', fontSize:"40px", border:'none'}}onClick={()=>upa(el.id)}><FaPenToSquare /></button>
+            </div>
+
+           </div>
           ))
          }
 
-         <br />
-        <Link to="/add">ADD POST</Link>
+         <br /><br /><br />
+        <Link style={{width:'100px' , height:'50px' , padding:'10px' , backgroundColor:"#087af4" ,color:'white', border:'none'}} to="/add">ADD POST</Link>
     </center>
   )
 }

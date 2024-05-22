@@ -22,7 +22,6 @@ function App() {
   }
 
   console.log(posts)
-
   
   function Delete(id){
     setPostes(posts.filter((el)=> el.id != id))
@@ -34,10 +33,10 @@ function App() {
 
   }
 
-  function Change(id,title,content){
+  function Change(id,title,content,image){
 
     setPostes(posts.map((el)=>(
-      el.id == id ? {...el, title:title , content:content} : el
+      el.id == id ? {...el, title:title , content:content , image:image} : el
     )))
 
   }
