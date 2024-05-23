@@ -6,6 +6,9 @@ import Navbar from './pages/Navbar';
 import { useState } from 'react';
 import Update from './pages/Update';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
 
   const [data,setData]=useState([])
@@ -29,15 +32,15 @@ function App() {
     setData(data.filter((el)=> el.id !== id))
   }
 
-  function editblog(id,title, price, rating, description ){
+  console.log(data)
+
+  function editblog(id,title, price, rating, description ,img ){
 
     let updatedPost=data.map((post)=>(
 
-      post.id===id ? {...post , title:title, price:price , rating:rating , description:description } : post
+      post.id===id ? {...post , title:title, price:price , rating:rating , description:description ,img:img } : post
 
      ))
-
-     console.log(updatedPost)
 
     setData(updatedPost)
 

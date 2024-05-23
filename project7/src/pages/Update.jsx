@@ -11,14 +11,20 @@ function Update({editblog , data}) {
     const [price, setPrice] = useState(ans.price);
     const [rating, setRating] = useState(ans.rating);
      const [description, setDescription] = useState(ans.description);
-    // const [img,setImg]=useState(null)
+    const [img,setImg]=useState(ans.img)
 
     let navigate=useNavigate()
 
     function handleSubmit(e){
         e.preventDefault()
-        editblog(ans.id,title, price, rating, description)   
+        editblog(ans.id,title, price, rating, description,img)   
         navigate('/')
+    }
+
+    function handleimg(e){
+      if(e.target.files ){
+        setImg([...e.target.files])
+      }
     }
 
   return (
@@ -82,9 +88,10 @@ function Update({editblog , data}) {
           <input
               type="file"
               id="img"
-            //   onChange={handleimg}
+              onChange={handleimg}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               required
+              multiple
             />
         </div>
 

@@ -19,7 +19,7 @@ const ProductPage = ({add}) => {
   };
 
   function handleimg(e){
-    setImg([e.target.files[0]]);
+    setImg([...e.target.files]);
   }
 
   return (
@@ -85,6 +85,7 @@ const ProductPage = ({add}) => {
               onChange={handleimg}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               required
+              multiple
             />
         </div>
 
