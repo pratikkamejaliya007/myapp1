@@ -56,7 +56,7 @@ function Add_patient() {
           <br />
           <input
             type='text'
-            placeholder='Enter Position'
+            placeholder='Patient type'
             className='w-[500px] h-[35px] p-2 border'
             value={position}
             onChange={(e) => setPosition(e.target.value)}

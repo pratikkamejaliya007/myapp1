@@ -13,6 +13,18 @@ function  Add_staff() {
         const [position,setPosition]=useState('')
         const [contact,setContact]=useState('')
         const [mail,setMail]=useState('')
+
+        const options = [
+            'Social Worker',
+            'Medical assistant',
+            'Nurse Educator',
+            'Nurses',
+            'Advocate',
+            'Physical therapists',
+            'Specialists',
+            'Attending physician',
+            'Medical Technologist'
+        ];
     
         useEffect(() => {
             if(Staffdata.length > 0){
@@ -54,9 +66,22 @@ function  Add_staff() {
     
                 
                 <input type="text" placeholder='Enter Name' className='w-[500px] h-[35px] p-2 border' value={name} onChange={(e)=>{setName(e.target.value)}} /> <br />
-    
-                
-                <input type="text" placeholder='Enter Position' className='w-[500px] h-[35px] p-2 border ' value={position} onChange={(e)=>{setPosition(e.target.value)}} /> <br />
+
+                <select onChange={(e)=>{setPosition(e.target.value)}} className='w-[500px] h-[35px] p-2 border bg-white text-gray-400'>
+
+                    <option value="">Please choose one option</option>
+
+                    {
+                        options.map((el,i)=>{
+                            return(
+                                <option key={i}>
+                                    {el}
+                                </option>
+                            )
+                        })
+                    }
+
+                </select>
     
                 
                 <input type="text" placeholder='Enter Contact' className='w-[500px] h-[35px] p-2 border ' value={contact} onChange={(e)=>{setContact(e.target.value)}}/> <br />

@@ -11,6 +11,17 @@ function Add_doctor() {
     const [contact,setContact]=useState('')
     const [mail,setMail]=useState('')
 
+    const options = [
+        'Cardiologists',
+        'Endocrinologist',
+        'Oncologist',
+        'Neurologist',
+        'Dermatologist',
+        'Gastroenterologist',
+        'Pediatrics',
+        'Psychiatrists',
+        'Gynecologist'
+    ];
     
     useEffect(() => {
         if (Doctordata.length > 0) {
@@ -59,9 +70,16 @@ function Add_doctor() {
             
             <input type="text" required placeholder='Enter Name' className='w-[500px] h-[35px] p-2 border' value={name} onChange={(e)=>{setName(e.target.value)}} /> <br />
 
-            
-            <input type="text" required placeholder='Enter Position' className='w-[500px] h-[35px] p-2 border ' value={position} onChange={(e)=>{setPosition(e.target.value)}} /> <br />
-
+            <select onChange={(e)=>setPosition(e.target.value)} required className='w-[500px] h-[35px] p-2 border bg-white text-gray-400'>
+                <option>Please choose one option</option>
+                {options.map((option, index) => {
+                    return (
+                        <option key={index}>
+                            {option}
+                        </option>
+                    );
+                })}
+            </select>
             
             <input type="text" required placeholder='Enter Contact' className='w-[500px] h-[35px] p-2 border ' value={contact} onChange={(e)=>{setContact(e.target.value)}}/> <br />
 
