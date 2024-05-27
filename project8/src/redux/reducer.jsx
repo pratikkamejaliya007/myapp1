@@ -1,22 +1,16 @@
-import { ADD ,DECREMENT } from "./action";
+import { ADD  } from "./action";
 
 const initialState={
-    data:{}
+    items:[]
 }
 
 const countReducer = (state = initialState,action) => {
 
     switch(action.type){
 
-        case ADD : return {
+        case 'ADD' : return {
             ...state,
-            
-        }
-
-        case DECREMENT : return {
-            ...state,
-            count :state.count > 0 ? state.count - 1 :0
-            
+            items:[...state.items, action.payload]
         }
 
         default : return state ;
