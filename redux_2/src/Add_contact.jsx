@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useSelector , useDispatch } from 'react-redux';
 import { add } from './redux/action';
+import { useNavigate } from 'react-router-dom';
 
 function Add_contact() {
 
@@ -13,7 +14,7 @@ function Add_contact() {
     const [mail,setMail]=useState('')
     const [profile,setProfile]=useState(null)
 
-    console.log(selector)
+    const navigate=useNavigate()
 
     function handlesubmit(e){
 
@@ -32,6 +33,8 @@ function Add_contact() {
         setName('')
         setNumber('')
         setMail('')
+
+        navigate('/')
 
     }
 
