@@ -1,36 +1,19 @@
-import React from 'react'
-import profile from '../img/profile.jpeg'
+import React from 'react';
+import homeImage from '../img/images.jpeg'; // Replace with your image path
 
-function Home() {
+const Home = () => {
   return (
-    <div className='w-full h-[100vh] bg-red-300 flex'>
+    <section id="home" className="flex flex-col lg:flex-row items-center justify-center h-auto p-6 bg-gray-100">
+      <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+        <img src={homeImage} alt="Home" className="w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-lg" />
+      </div>
+      <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:pl-12 text-center lg:text-left">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-800">Welcome to My Website</h1>
+        <p className="mt-4 text-gray-600">I'm a web developer specializing in building and designing exceptional digital experiences. Currently, I'm focused on building responsive web applications.</p>
+        <a href="#contact" className="mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded-full shadow hover:bg-blue-600 transition duration-300">Contact Me</a>
+      </div>
+    </section>
+  );
+};
 
-        <aside className='w-[20%] h-full p-2 bg-slate-300'>
-            
-            <div className='w-[250px] h-[250px] border mx-auto flex flex-col items-center justify-around'>
-
-                <img src={profile} alt="" className='w-[90%] h-[80%] rounded-[100%]' />
-
-                <h1 className='text-2xl text-gray-500'>Full stack Devloper</h1>
-
-            </div>
-
-            <div className='w-[70%] h-[60%] border border-black mx-auto mt-5'>
-
-                <ul>
-                    <li></li>
-                </ul>
-
-            </div>
-            
-        </aside>
-
-        <section className='w-[80%] h-full bg-white'>
-
-        </section>
-        
-    </div>
-  )
-}
-
-export default Home
+export default Home;
