@@ -21,7 +21,7 @@ function Add_contact() {
         e.preventDefault()
 
         const newdata = {
-            id:Date.now(),
+            // id:Date.now(),
             name,
             number,
             mail,

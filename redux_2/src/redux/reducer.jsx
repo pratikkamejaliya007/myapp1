@@ -10,7 +10,7 @@ const add_data = (state=instial_state,action)=>{
 
         case ADD : return {
             ...state,
-            data:[...state.data,action.payload]
+            data:[...state.data,action.payload],
         }
 
         case DELETE : return {

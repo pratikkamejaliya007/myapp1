@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
 
 const Add_post = () => {
+
+  const navigate=useNavigate()
   
   const [data,setData]=useState({
     title:'',
@@ -23,6 +26,7 @@ const Add_post = () => {
     .then((res)=>{
         console.log(res)
         setData({ title: '', content: '' });
+        navigate('/')
     }).catch((err)=>{
         console.log('error',err)
     })
