@@ -28,7 +28,7 @@ const Add_post = () => {
         setData({ title: '', content: '' });
         navigate('/')
     }).catch((err)=>{
-        console.log('error',err)
+        console.log('error')
     })
 
   };
