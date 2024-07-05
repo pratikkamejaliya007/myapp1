@@ -2,11 +2,13 @@ import './App.css';
 import Email_signup from './Email_signup';
 import Home from './Home';
 import {BrowserRouter as Router , Routes , Route} from 'react-router-dom'
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import Public from './public/public'
 
 function App() {
 
-  const [val,setVal]=useState(false)
+
+  const selector = useSelector((state) => state.privet.value)
 
   return (
     <>      
@@ -15,11 +17,9 @@ function App() {
 
         <Routes>
 
-            {val ? <Route path='/' element={<Home/>} /> 
+          {selector ? <Route path='/' element={<Home/>} /> 
             :
-            <Route path='/' element={<div>
-              hello
-            </div>} /> }
+            <Route path='/' element={<Public />} /> }
 
             <Route path='/login' element={<Email_signup/>} />
 

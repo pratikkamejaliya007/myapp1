@@ -13,6 +13,7 @@ function Display({ name }) {
       if (data1) {
         const result = Object.keys(data1).map((key) => data1[key]);
         setData(result);
+        // console.log(result[0])
       } else {
         setData([]);
       }

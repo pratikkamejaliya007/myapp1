@@ -3,8 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { auth } from './config';
 import { useNavigate } from 'react-router-dom';
 import { sendSignInLinkToEmail, signInWithEmailLink, isSignInWithEmailLink } from 'firebase/auth';
+import { useDispatch } from 'react-redux';
+import toast, { Toaster } from 'react-hot-toast';
+import { setprivet  } from './redux-toolkit/privetrouter';
 
 function Email_signup() {
+
+  const dispatch=useDispatch()
+
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
@@ -28,25 +34,36 @@ function Email_signup() {
         .then((result) => {
           window.localStorage.removeItem('emailForSignIn');
           setMessage('Sign-in successful');
-          navigate('/')
+          dispatch(setprivet())
+          // navigate('/')
         })
         .catch((error) => {
           setMessage(error.message);
+          toast.error(message)
         });
     }
   }, []);
 
   const handleSignUp = (event) => {
     event.preventDefault();
+    
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
       .then(() => {
         window.localStorage.setItem('emailForSignIn', email);
         setMessage('Sign-in link sent to your email');
+        toast.success('Sign-in link sent to your email')
       })
       .catch((error) => {
         setMessage(error.message);
+        toast.error(message)
       });
+    dispatch(setprivet())
+    navigate('/')
   };
+
+  function handleclick() {
+    toast.success('Sign-in successful')
+  }
 
   return (
     <div>
@@ -64,7 +81,13 @@ function Email_signup() {
         </div>
         <button type="submit">Send Sign-In Link</button>
       </form>
-      {message && <p>{message}</p>}
+      <Toaster
+        position="top-right"
+        reverseOrder={false}
+      />
+
+      <button onClick={handleclick}>click</button>
+      {/* {message && <p>{message}</p>} */}
     </div>
   );
 }
