@@ -1,13 +1,8 @@
 import React from 'react';
 import { WiDayRain, WiBarometer, WiStrongWind, WiHumidity, WiDaySunny, WiRaindrop, WiSmoke } from 'react-icons/wi';
 import 'tailwindcss/tailwind.css';
-import { useSelector } from 'react-redux';
 
-const WeatherWidget = () => {
-
-    const data=useSelector(state => state.Weather.value)
-
-    const hour=new Date()
+const WeatherWidget = ({data}) => {
 
 
   return (<>

@@ -1,23 +1,19 @@
 // src/components/FormComponent.js
 
-import React, { useState, useEffect } from 'react';
-import './FormComponent.css';
-import { database } from './config'; // Ensure this is correctly exported and imported
-import { ref, set, update as firebaseUpdate,remove } from "firebase/database";
-import Display from './Display';
+import React, { useState, useEffect } from "react";
+import "./FormComponent.css";
+import { database } from "./config"; // Ensure this is correctly exported and imported
+import { ref, set, update as firebaseUpdate, remove } from "firebase/database";
+import Display from "./Display";
 
 const FormComponent = () => {
-
-  
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
- 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const newdata = ref(database, `users/${name}`);
 
     set(newdata, { name, email, message })
@@ -28,35 +24,35 @@ const FormComponent = () => {
         console.error("Error saving data: ", error);
       });
 
-    setName('');
-    setEmail('');
-    setMessage('');
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
-  const deletedata = (username) =>{
-
-    const useref=ref(database,`users/${username}`);
+  const deletedata = (username) => {
+    const useref = ref(database, `users/${username}`);
     remove(useref)
-    .then(()=>{
-      console.log(`${username} deleted`)
-    }).catch((err)=>{
-      console.log('err')
-    })
-  }
-
-  const update = (username) =>{
-    const itemRef = ref(database, `users/${name}`);
-    firebaseUpdate(itemRef, {username})
       .then(() => {
-        console.log("sussfully updated")
+        console.log(`${username} deleted`);
+      })
+      .catch((err) => {
+        console.log("err");
+      });
+  };
+
+  const update = (username) => {
+    const itemRef = ref(database, `users/${name}`);
+    firebaseUpdate(itemRef, { username })
+      .then(() => {
+        console.log("sussfully updated");
         // setPopupVisible(false);
         // Additional logic if needed after update
       })
       .catch((error) => {
         console.error("Error updating data: ", error);
       });
-    console.log(username)
-  }
+    console.log(username);
+  };
 
   return (
     <div className="form-container">
@@ -93,9 +89,8 @@ const FormComponent = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
-        
-        <Display name={name} deletedata={deletedata} update={update} />
 
+      <Display name={name} deletedata={deletedata} update={update} />
     </div>
   );
 };

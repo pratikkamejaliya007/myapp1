@@ -1,14 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 import Weather from './Weather';
-import WeatherWidget from './WeatherWidget';
-
+import History from './History';
+import {BrowserRouter as Router , Routes , Route} from 'react-router-dom';
 
 function App() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-400 to-purple-600 text-white">
-      <Weather/>
-      <WeatherWidget/>
+      
+      <Router>
+
+          <Routes>
+
+            <Route path='/' element={<Weather/>} />
+            <Route path='/history' element={<History/>} />
+
+          </Routes>
+
+      </Router>
+
+      {/* <Weather/>
+      <WeatherWidget/> */}
     </div>
   );
 }
