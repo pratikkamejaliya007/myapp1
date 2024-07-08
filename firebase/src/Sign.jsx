@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import './FormComponent.css';
 import { database } from './config'; // Ensure this is correctly exported and imported
-import { ref, set, child, get, onValue } from "firebase/database";
+import { ref, set, update as firebaseUpdate,remove } from "firebase/database";
 import Display from './Display';
 
 const FormComponent = () => {
@@ -32,6 +32,31 @@ const FormComponent = () => {
     setEmail('');
     setMessage('');
   };
+
+  const deletedata = (username) =>{
+
+    const useref=ref(database,`users/${username}`);
+    remove(useref)
+    .then(()=>{
+      console.log(`${username} deleted`)
+    }).catch((err)=>{
+      console.log('err')
+    })
+  }
+
+  const update = (username) =>{
+    const itemRef = ref(database, `users/${name}`);
+    firebaseUpdate(itemRef, {username})
+      .then(() => {
+        console.log("sussfully updated")
+        // setPopupVisible(false);
+        // Additional logic if needed after update
+      })
+      .catch((error) => {
+        console.error("Error updating data: ", error);
+      });
+    console.log(username)
+  }
 
   return (
     <div className="form-container">
@@ -68,13 +93,9 @@ const FormComponent = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
+        
+        <Display name={name} deletedata={deletedata} update={update} />
 
-            {/* {
-                data.map((el)=>(
-                    <h1 key={el.name}>{el.name}</h1>
-                ))
-            } */}
-    <Display name={name}/>
     </div>
   );
 };
