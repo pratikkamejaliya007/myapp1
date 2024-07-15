@@ -1,0 +1,10 @@
+
+#slide{
+    top: 150px;
+    
+}
+
+#product:hover #slide{
+    top: -10px;
+    transition: 400ms;
+}
