@@ -1,16 +1,20 @@
 // src/config.js
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDELrE-YYZry2rw7BSB5rasLhBQD3nSzF0",
-  authDomain: "mobile-854a7.firebaseapp.com",
-  projectId: "mobile-854a7",
-  storageBucket: "mobile-854a7.appspot.com",
-  messagingSenderId: "548540329180",
-  appId: "1:548540329180:web:6357d202e2cc0bf55a9819",
-  measurementId: "G-B2RZ73J2T8"
+  apiKey: "AIzaSyCZq1TAx3OW6y-KNY4RHlKZzSA6yjFohIE",
+  authDomain: "first-4fe17.firebaseapp.com",
+  projectId: "first-4fe17",
+  storageBucket: "first-4fe17.appspot.com",
+  messagingSenderId: "730378517508",
+  appId: "1:730378517508:web:a6d747de5fb5ba36eec951",
+  measurementId: "G-DPM360RJVS"
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
+
+ const auth = getAuth(app);
+
+ export { auth, googleProvider };

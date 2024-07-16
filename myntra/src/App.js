@@ -3,34 +3,25 @@ import Footer from './component/Footer';
 import Header from './component/Header';
 import Bag from './component/Bag';
 import Login from './component/Login';
-import { useSelector } from 'react-redux';
 import ADDTOBAG from './component/ADDTOBAG';
-
-import {BrowserRouter as Router , Routes,Route} from 'react-router-dom'
+import Checkout from './checkout/Checkout';
+import PrivateRoute from './component/PrivateRoute'; // Adjust the import path as needed
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-
-    const log=useSelector(state => state.log)
-
   return (
     <>
-
-    <Router>
-      <Header/>
-      {/* <ADDTOBAG/> */}
-      
+      <Router>
+        <Header />
         <Routes>
-
           <Route path='/' element={<Bag />} />
-
           <Route path='/Login' element={<Login />} />
-
-          <Route path='/bag' element={<ADDTOBAG/>} /> :            
-
+          {/* <Route path='/bag' element={<PrivateRoute element={ADDTOBAG} />} /> */}
+          <Route path='/bag' element={<ADDTOBAG/>} />
+          <Route path='/checkout' element={<Checkout />} />
         </Routes>
-
-      <Footer/>      
-    </Router>
+        <Footer />
+      </Router>
     </>
   );
 }

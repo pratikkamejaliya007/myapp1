@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector,useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
-import ProductCard from '../ProductCard';
+import ProductCard from './ProductCard';
 import Loader from './Loader';
 import { addbag } from '../redux/bagslice';
 
 function Bag() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
-  // const bag = useSelector(state => state.bag);
-  // console.log(bag)
+  const bag = useSelector((state) => state.bag);
 
   useEffect(() => {
     const fetch = async () => {
@@ -28,14 +27,11 @@ function Bag() {
     fetch();
   }, []);
 
-  
-  const log = useSelector((state) => state.log);
-
   if (loading) {
     return <Loader />;
   }
 
-  function addbagdata(id){
+  function addbagdata(id) {
     const bagdata = data.filter((el) => el.id == id);
     if (bagdata.length > 0) {
       const firstObject = bagdata[0];
@@ -44,13 +40,19 @@ function Bag() {
     } else {
       console.log("No matching object found");
     }
-    // dispatch(addbag(id))
   }
 
   return (
     <div className='flex flex-wrap my-10'>
       {data.length > 0 ? (
-        data.map((el) => <ProductCard key={el.id} data={el} addbagdata={addbagdata}/>)
+        data.map((el) => (
+          <ProductCard
+            key={el.id}
+            data={el}
+            addbagdata={addbagdata}
+            isAdded={bag.some((item) => item.id === el.id)}
+          />
+        ))
       ) : (
         <p>No products available</p>
       )}

@@ -7,7 +7,7 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+import { FaRegUser } from "react-icons/fa";
 
 
 
@@ -55,7 +55,7 @@ function Header() {
         <div className='2xl:flex xl:flex lg:flex hidden justify-between items-center
          w-[10%] h-full'>
             <div className=' flex flex-col items-center cursor-pointer'>
-                <FaUser className='text-xl' onClick={handlelogin}/>
+                <FaRegUser className='text-xl' onClick={handlelogin}/>
             </div>
             <div className=' flex flex-col items-center cursor-pointer'>
                 <CiHeart className='text-2xl'/>
@@ -99,7 +99,7 @@ function Header() {
         <div className='flex flex-row p-2 mt-3 border-b justify-between items-center
          '>
             <div className=' flex flex-col items-center cursor-pointer'>
-                <FaUser className='text-xl' onClick={handlelogin}/>
+                <FaRegUser className='text-xl' onClick={handlelogin}/>
             </div>
             <div className=' flex flex-col items-center cursor-pointer'>
                 <CiHeart className='text-2xl'/>
