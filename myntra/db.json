@@ -7,7 +7,12 @@
       "category": "Men's Fashion",
       "price": 1499,
       "discountPrice": 749,
-      "sizes": ["S", "M", "L", "XL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "color": "Blue",
       "rating": 4.2,
       "productLikes": 102,
@@ -23,7 +28,12 @@
       "category": "Women's Fashion",
       "price": 1999,
       "discountPrice": 999,
-      "sizes": ["XS", "S", "M", "L"],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
       "color": "Red",
       "rating": 4.5,
       "productLikes": 98,
@@ -39,7 +49,12 @@
       "category": "Footwear",
       "price": 5999,
       "discountPrice": 4999,
-      "sizes": ["7", "8", "9", "10"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
       "color": "Black",
       "rating": 4.7,
       "productLikes": 120,
@@ -55,7 +70,13 @@
       "category": "Women's Fashion",
       "price": 2499,
       "discountPrice": 1249,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "color": "Green",
       "rating": 4.3,
       "productLikes": 85,
@@ -71,7 +92,12 @@
       "category": "Men's Fashion",
       "price": 3499,
       "discountPrice": 2799,
-      "sizes": ["S", "M", "L", "XL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "color": "Blue",
       "rating": 4.6,
       "productLikes": 112,
@@ -87,7 +113,12 @@
       "category": "Footwear",
       "price": 2999,
       "discountPrice": 1999,
-      "sizes": ["5", "6", "7", "8"],
+      "sizes": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
       "color": "White",
       "rating": 4.4,
       "productLikes": 95,
@@ -103,7 +134,12 @@
       "category": "Men's Fashion",
       "price": 1899,
       "discountPrice": 949,
-      "sizes": ["30", "32", "34", "36"],
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36"
+      ],
       "color": "Black",
       "rating": 4.2,
       "productLikes": 80,
@@ -119,7 +155,12 @@
       "category": "Women's Fashion",
       "price": 2999,
       "discountPrice": 1499,
-      "sizes": ["XS", "S", "M", "L"],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L"
+      ],
       "color": "Pink",
       "rating": 4.6,
       "productLikes": 92,
@@ -135,13 +176,19 @@
       "category": "Footwear",
       "price": 4999,
       "discountPrice": 3999,
-      "sizes": ["7", "8", "9", "10", "11"],
+      "sizes": [
+        "7",
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
       "color": "Grey",
       "rating": 4.5,
       "productLikes": 115,
       "images": [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmLgD2uaEDlSg1URSm0iTudWl2y149Z0KPoA&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2AJjA_E0Vl__P9_Nxjb34_Dzz7u68f1891Q&usqp=CAU"
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2AJjA_E0Vl__P9_Nxjb34_Dzz7u68f1891Q&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmLgD2uaEDlSg1URSm0iTudWl2y149Z0KPoA&usqp=CAU"
       ]
     },
     {
@@ -151,14 +198,18 @@
       "category": "Women's Fashion",
       "price": 1299,
       "discountPrice": 649,
-      "sizes": ["S", "M", "L", "XL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
       "color": "White",
       "rating": 4.1,
       "productLikes": 78,
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4bpQeX3vKDlrJdaDCQi3ObSze_3rNJ9AEjA&usqp=CAU",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXKfJudk0hFdj4zm30ebNImTpjrUwl3tDQ_w&usqp=CAU"
-        
       ]
     },
     {
@@ -168,7 +219,13 @@
       "category": "Men's Fashion",
       "price": 999,
       "discountPrice": 499,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "color": "Yellow",
       "rating": 4.3,
       "productLikes": 85,
@@ -184,7 +241,13 @@
       "category": "Footwear",
       "price": 3499,
       "discountPrice": 1749,
-      "sizes": ["5", "6", "7", "8", "9"],
+      "sizes": [
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
       "color": "Black",
       "rating": 4.5,
       "productLikes": 100,
@@ -200,7 +263,13 @@
       "category": "Men's Fashion",
       "price": 1599,
       "discountPrice": 799,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "color": "Green",
       "rating": 4.4,
       "productLikes": 87,
@@ -216,7 +285,12 @@
       "category": "Footwear",
       "price": 4499,
       "discountPrice": 2249,
-      "sizes": ["5", "6", "7", "8"],
+      "sizes": [
+        "5",
+        "6",
+        "7",
+        "8"
+      ],
       "color": "Brown",
       "rating": 4.3,
       "productLikes": 88,
@@ -232,7 +306,13 @@
       "category": "Men's Fashion",
       "price": 2499,
       "discountPrice": 1249,
-      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
       "color": "White",
       "rating": 4.2,
       "productLikes": 82,
@@ -248,7 +328,9 @@
       "category": "Accessories",
       "price": 2999,
       "discountPrice": 1499,
-      "sizes": ["One Size"],
+      "sizes": [
+        "One Size"
+      ],
       "color": "Black",
       "rating": 4.5,
       "productLikes": 90,
@@ -264,13 +346,15 @@
       "category": "Accessories",
       "price": 9999,
       "discountPrice": 7999,
-      "sizes": ["One Size"],
+      "sizes": [
+        "One Size"
+      ],
       "color": "Silver",
       "rating": 4.6,
       "productLikes": 115,
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwh1K6L9GULgGjcg-_sRqQbRdOjYLRKk6WVA&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNFag-qvSpvunabM4LcLCkJfep_kurK408g&usqp=CAU"        
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsNFag-qvSpvunabM4LcLCkJfep_kurK408g&usqp=CAU"
       ]
     },
     {
@@ -280,13 +364,15 @@
       "category": "Accessories",
       "price": 6999,
       "discountPrice": 4999,
-      "sizes": ["One Size"],
+      "sizes": [
+        "One Size"
+      ],
       "color": "Brown",
       "rating": 4.7,
       "productLikes": 120,
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKhXKgglCQAcQlexwyyonqsXqAQWA5WuSytQ&usqp=CAU",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbHlPb7vZKEvAJ-cypabngN8NBDGhL18daKw&usqp=CAU"        
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbHlPb7vZKEvAJ-cypabngN8NBDGhL18daKw&usqp=CAU"
       ]
     },
     {
@@ -296,7 +382,9 @@
       "category": "Accessories",
       "price": 2499,
       "discountPrice": 1999,
-      "sizes": ["One Size"],
+      "sizes": [
+        "One Size"
+      ],
       "color": "Brown",
       "rating": 4.5,
       "productLikes": 98,
@@ -312,16 +400,53 @@
       "category": "Accessories",
       "price": 999,
       "discountPrice": 499,
-      "sizes": ["One Size"],
+      "sizes": [
+        "One Size"
+      ],
       "color": "Multicolor",
       "rating": 4.2,
       "productLikes": 75,
       "images": [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoDgvqdhDzSaWF9vYmFRM2_WLm4zf8qCOQUA&usqp=CAU",
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTawewaEtedzBEUtMnFDdHLgX-slmJBh7M1eg&usqp=CAU"
-        
+      ]
+    },
+    {
+      "id": "121",
+      "name": "Medium 22 L Backpack ",
+      "brand": "SAFARI",
+      "category": "bag",
+      "price": "514",
+      "discountPrice": "1699",
+      "sizes": [
+        "9"
+      ],
+      "color": "black",
+      "rating": "3.5",
+      "productLikes": "120",
+      "images": [
+        "",
+        "https://rukminim2.flixcart.com/image/612/612/xif0q/backpack/z/c/i/-original-imah2dbtxjtcmtwd.jpeg?q=70"
+      ]
+    },
+    {
+      "id": "122",
+      "name": "Fridge Water bottle",
+      "brand": "NIRLON",
+      "category": "bottle",
+      "price": "349",
+      "discountPrice": "999",
+      "sizes": [
+        "7",
+        "8"
+      ],
+      "color": "silver",
+      "rating": "4.0",
+      "productLikes": "100",
+      "images": [
+        "",
+        "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-bottle/j/t/c/1000-stainless-steel-single-wall-fridge-water-bottle-silver-set-original-imagv2phhu8d8eru.jpeg?q=70"
       ]
     }
   ]
 }
-

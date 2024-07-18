@@ -43,6 +43,7 @@ function Add_patient() {
             placeholder='Enter Id'
             className='w-[500px] h-[35px] p-2 border'
             value={id}
+            required
             onChange={(e) => setId(e.target.value)}
           /> 
           <br />
@@ -51,6 +52,7 @@ function Add_patient() {
             placeholder='Enter Name'
             className='w-[500px] h-[35px] p-2 border'
             value={name}
+            required
             onChange={(e) => setName(e.target.value)}
           /> 
           <br />
@@ -67,6 +69,7 @@ function Add_patient() {
             placeholder='Enter Contact'
             className='w-[500px] h-[35px] p-2 border'
             value={contact}
+            required
             onChange={(e) => setContact(e.target.value)}
           /> 
           <br />
@@ -75,6 +78,7 @@ function Add_patient() {
             placeholder='Enter E-mail'
             className='w-[500px] h-[35px] p-2 border'
             value={mail}
+            required
             onChange={(e) => setMail(e.target.value)}
           /> 
           <br />

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import ProductCard from './ProductCard';
 import Loader from './Loader';
-import { addbag } from '../redux/bagslice';
+import { addbag , removebag } from '../redux/bagslice';
 
 function Bag() {
   const [data, setData] = useState([]);
@@ -42,6 +42,10 @@ function Bag() {
     }
   }
 
+  function removebagdata(id){
+    dispatch(removebag(id))
+  }
+
   return (
     <div className='flex flex-wrap my-10'>
       {data.length > 0 ? (
@@ -50,6 +54,7 @@ function Bag() {
             key={el.id}
             data={el}
             addbagdata={addbagdata}
+            removebagdata={removebagdata}
             isAdded={bag.some((item) => item.id === el.id)}
           />
         ))

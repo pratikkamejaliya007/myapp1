@@ -14,7 +14,7 @@ function Bag_product({ data, remove }) {
           <div className="flex">
             <img
               className="w-1/3 object-cover"
-              src={data.images[0]}
+              src={data.images[1]}
               alt={data.name}
             />
             <div className="flex-1 p-4 relative">
