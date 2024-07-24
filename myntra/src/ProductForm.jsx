@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const ProductForm = () => {
+
+    const navigate=useNavigate()
+
   const [formData, setFormData] = useState({
     id: '',
     name: '',
@@ -49,11 +53,11 @@ const ProductForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        // POST request example
+        
         const res = await axios.post('http://localhost:8000/products', formData);
-        console.log('POST request successful:', res.data);
-  
-        // Optionally update state or perform any additional actions after successful POST
+
+        navigate("/")
+        
       } catch (error) {
         console.error('Error posting data', error);
       }
@@ -65,27 +69,27 @@ const ProductForm = () => {
       <div className="grid gap-6 mb-6">
         <div>
           <label className="block text-gray-700">ID:</label>
-          <input type="text" name="id" value={formData.id} onChange={handleInputChange} className="w-full mt-2 p-2 border rounded-lg" />
+          <input type="text" name="id" value={formData.id} onChange={handleInputChange} required className="w-full mt-2 p-2 border rounded-lg" />
         </div>
         <div>
           <label className="block text-gray-700">Name:</label>
-          <input type="text" name="name" value={formData.name} onChange={handleInputChange} className="w-full mt-2 p-2 border rounded-lg" />
+          <input type="text" name="name" value={formData.name} onChange={handleInputChange} required className="w-full mt-2 p-2 border rounded-lg" />
         </div>
         <div>
           <label className="block text-gray-700">Brand:</label>
-          <input type="text" name="brand" value={formData.brand} onChange={handleInputChange} className="w-full mt-2 p-2 border rounded-lg" />
+          <input type="text" name="brand" value={formData.brand} onChange={handleInputChange} required className="w-full mt-2 p-2 border rounded-lg" />
         </div>
         <div>
           <label className="block text-gray-700">Category:</label>
-          <input type="text" name="category" value={formData.category} onChange={handleInputChange} className="w-full mt-2 p-2 border rounded-lg" />
+          <input type="text" name="category" value={formData.category} onChange={handleInputChange} required className="w-full mt-2 p-2 border rounded-lg" />
         </div>
         <div>
           <label className="block text-gray-700">Price:</label>
-          <input type="number" name="price" value={formData.price} onChange={handleInputChange} className="w-full mt-2 p-2 border rounded-lg" />
+          <input type="number" name="price" value={formData.price} onChange={handleInputChange} required className="w-full mt-2 p-2 border rounded-lg" />
         </div>
         <div>
           <label className="block text-gray-700">Discount Price:</label>
-          <input type="number" name="discountPrice" value={formData.discountPrice} onChange={handleInputChange} className="w-full mt-2 p-2 border rounded-lg" />
+          <input type="number" name="discountPrice" value={formData.discountPrice} onChange={handleInputChange} required className="w-full mt-2 p-2 border rounded-lg" />
         </div>
         <div>
           <label className="block text-gray-700">Sizes:</label>

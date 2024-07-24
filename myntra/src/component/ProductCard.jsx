@@ -14,7 +14,7 @@ const ProductCard = ({ data, addbagdata, isAdded, removebagdata }) => {
   const { sizes, images, name, rating, productLikes, brand } = data;
 
   return (
-    <div id="product" className="max-w-xs mx-auto bg-white shadow-md rounded-lg overflow-hidden my-4">
+    <div id="product" className="max-w-xs 2xl:w-[18%] xl:w-[18%] lg:w-[24%] md:w-[30%] sm:w-[50%] mx-auto bg-white shadow-md rounded-lg overflow-hidden my-4">
       <img
         className="w-full h-64 object-cover"
         src={images && images.length > 0 ? images[1] : ''}
@@ -32,7 +32,7 @@ const ProductCard = ({ data, addbagdata, isAdded, removebagdata }) => {
             <p className="text-gray-600">{name}</p>
             <div id="slide" className="mt-4 absolute w-full bg-white">
               <button
-                className={`flex items-center justify-center px-10 mx-auto mb-2 py-2 border rounded-md text-gray-700 border-gray-300 ${isAdded ? 'bg-gray-300' : ''}`}
+                className={`flex items-center justify-center px-10 mx-auto mb-2 py-2 border rounded-md text-gray-700 border-gray-300 ${isAdded ? 'bg-gray-300' : 'hover:bg-pink-500 hover:text-white'}`}
                 onClick={() =>
                   isAdded ? removebagdata(data.id) : addbagdata(data.id)
                 }

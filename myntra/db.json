@@ -416,8 +416,8 @@
       "name": "Medium 22 L Backpack ",
       "brand": "SAFARI",
       "category": "bag",
-      "price": "514",
-      "discountPrice": "1699",
+      "price": 514,
+      "discountPrice": 1699,
       "sizes": [
         "9"
       ],
@@ -434,8 +434,8 @@
       "name": "Fridge Water bottle",
       "brand": "NIRLON",
       "category": "bottle",
-      "price": "349",
-      "discountPrice": "999",
+      "price": 349,
+      "discountPrice": 999,
       "sizes": [
         "7",
         "8"
@@ -446,6 +446,24 @@
       "images": [
         "",
         "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-bottle/j/t/c/1000-stainless-steel-single-wall-fridge-water-bottle-silver-set-original-imagv2phhu8d8eru.jpeg?q=70"
+      ]
+    },
+    {
+      "id": "123",
+      "name": "MANFORCE Combo Pack",
+      "brand": "MANFORCE",
+      "category": "condom",
+      "price": 180,
+      "discountPrice": 300,
+      "sizes": [
+        "7"
+      ],
+      "color": "Strawberry,Chocolate",
+      "rating": "4.1",
+      "productLikes": "1200",
+      "images": [
+        "",
+        "https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-condom/o/z/z/set-30-combo-pack-strawberry-chocolate-litchi-flavoured-3-original-imahybs6fvzj7qhf.jpeg?q=70"
       ]
     }
   ]

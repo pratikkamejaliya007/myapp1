@@ -8,8 +8,7 @@ import { IoClose } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FaRegUser } from "react-icons/fa";
-
-
+import { IoIosAddCircle } from "react-icons/io";
 
 function Header() {
 
@@ -32,6 +31,10 @@ function Header() {
 
   function handlehome(){
     navigate('/')
+  }
+
+  function handleadd(){
+    navigate('/add')
   }
 
   return (
@@ -57,8 +60,8 @@ function Header() {
             <div className=' flex flex-col items-center cursor-pointer'>
                 <FaRegUser className='text-xl' onClick={handlelogin}/>
             </div>
-            <div className=' flex flex-col items-center cursor-pointer'>
-                <CiHeart className='text-2xl'/>
+            <div className=' flex flex-col items-center cursor-pointer' onClick={handleadd}>
+                <IoIosAddCircle  className='text-2xl'/>
             </div>
             <div className=' flex flex-col cursor-pointer' onClick={handlebag}>
                 
